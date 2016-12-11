@@ -1,0 +1,21 @@
+{
+  "name": "ayro.nz",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon server.js",
+    "debug": "DEBUG=ayro.nz:* npm start"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "compression": "^1.6.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.14.0",
+    "morgan": "~1.7.0",
+    "nodemon": "^1.11.0",
+    "pug": "~2.0.0-beta6",
+    "serve-favicon": "~2.3.0",
+    "stylus": "0.54.5"
+  }
+}
