@@ -3,16 +3,10 @@ const app = require('./app')
 const PORT = process.env.PORT || 3001
 
 // Why don't I need http createServer
-app.listen(PORT)
+app.listen(PORT, ()=>{
+  console.log(`App listening on port ${PORT}!`)
+})
 app.on('error', onError)
-
-function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-  console.log('Listening on ' + bind);
-}
 
 function onError(error) {
   if (error.syscall !== 'listen') {
