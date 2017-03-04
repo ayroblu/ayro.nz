@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-//import './App.css'
+import './NoMatch.css'
 
 class NoMatch extends Component {
   render() {
     return (
-      <div>
+      <div className='NoMatch'>
         Sorry, page not found
       </div>
     )

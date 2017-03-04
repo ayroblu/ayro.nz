@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import _ from 'lodash'
+import './App.css'
 //import injectTapEventPlugin from 'react-tap-event-plugin'
 //import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
@@ -12,8 +13,7 @@ export default class App extends Component {
     //  <MuiThemeProvider>
     //  </MuiThemeProvider>
     return (
-      <div>
-        <h1>My App Page</h1>
+      <div className='App'>
         {this.props.children}
       </div>
     )

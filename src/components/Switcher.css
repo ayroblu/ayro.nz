@@ -1,0 +1,32 @@
+.Switcher {
+}
+.Switcher > * {
+  display: inline-block;
+  margin-left: 40px;
+  cursor: pointer;
+}
+.Switcher > *:first-child {
+  margin-left: 0;
+}
+.Switcher .bubble{
+  width: 100px;
+  height: 100px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  border-radius: 50%;
+  transition: all 0.2s;
+  filter: grayscale(80%);
+}
+.Switcher .bubble:hover{
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+  filter: none;
+}
+.Switcher .bubble > *{
+  transition: all 0.2s;
+  transform: scale(0.8, 0.8);
+}
+.Switcher .bubble:hover > *{
+  transform: scale(1, 1);
+}
+.Switcher p{
+  margin-top: 10px;
+}
