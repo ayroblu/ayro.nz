@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import Switcher from '../components/Switcher'
-import './Interactive.css'
+import './Technical.css'
 
-class Interactive extends Component {
+class Technical extends Component {
   render() {
     return (
-      <div className='Interactive'>
-        Interactive
+      <div className='Technical'>
+        Technical
         <Switcher />
       </div>
     )
@@ -24,5 +24,5 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Interactive)
+)(Technical)
 

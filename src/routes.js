@@ -3,7 +3,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
 import App from './containers/App'
 import MainPage from './containers/MainPage'
-import Interactive from './containers/Interactive'
+import Technical from './containers/Technical'
 import MultiPlatform from './containers/MultiPlatform'
 import NoMatch from './components/NoMatch'
 
@@ -12,7 +12,7 @@ const Routes = props => {
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={MainPage}/>
-        <Route path="interactive" component={Interactive}/>
+        <Route path="technical" component={Technical}/>
         <Route path="multiplatform" component={MultiPlatform}/>
         <Route path="*" component={NoMatch}/>
       </Route>

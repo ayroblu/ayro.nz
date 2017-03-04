@@ -13,12 +13,24 @@ class Switcher extends Component {
           </div>
           <p>Home</p>
         </Link>
-        <Link to='/interactive' className='interactive'>
-          <div className='bubble' />
-          <p>Interactive</p>
+        <Link to='/technical' className='technical'>
+          <div className='bubble'>
+            <div>
+              <div className='bubbleInner'>
+                Technical
+              </div>
+            </div>
+          </div>
+          <p>Technical</p>
         </Link>
         <Link to='/multiplatform' className='multiplatform'>
-          <div className='bubble' />
+          <div className='bubble'>
+            <div>
+              <div className='bubbleInner'>
+                Multi Platform
+              </div>
+            </div>
+          </div>
           <p>Multi Platform</p>
         </Link>
       </nav>

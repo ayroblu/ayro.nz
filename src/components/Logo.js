@@ -6,18 +6,27 @@ export default class Logo extends Component {
     style: React.PropTypes.object,
     animationDisabled: React.PropTypes.bool
   }
+  componentDidMount(){
+    this._first = true
+    this.forceUpdate()
+  }
   render(){
     //<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1={"494.6821"} y1="39.7505" x2="12.2761" y2="522.1566">
+    if (!this._first){
+      return (
+        <svg />
+      )
+    }
     const name = ['Logo', this.props.animationDisabled ? 'NoAnimation' : '']
       .filter(n=>n).join(' ')
     return (
       <svg className={name} x="0px" y="0px" style={this.props.style}
         width="504.326px" height="590.407px" viewBox="0 0 504.326 590.407" enableBackground="new 0 0 504.326 590.407">
         <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1='494.4821' y1='39.7505' x2="12.2761" y2="522.1566">
-          <stop offset="0" className='stop1'/>
-          <stop offset="1" className='stop2'/>
+          <stop offset="0" className='stop1' />
+          <stop offset="1" className='stop2' />
         </linearGradient>
-        <path className='main' ref={r=>this._path=r} fillRule="evenodd" clipRule="evenodd" fill="url(#SVGID_1_)" d="M252.271,414.939c25.862-6.705,46.612-13.705,66.511-22.769
+        <path className='main' fillRule="evenodd" clipRule="evenodd" fill="url(#SVGID_1_)" d="M252.271,414.939c25.862-6.705,46.612-13.705,66.511-22.769
           c12.756-6.711,15.903-8.234,24.941-15.929c-36.502,4.93-70.469,7.158-103.163-8.518c15.648,0,31.338,0.722,46.939-0.133
           c49.016-2.684,94.669-16.105,134.077-46.28c15.719-12.036,29.928-26.107,37.516-46.214
           c-74.495,41.441-151.617,65.807-232.539,43.243c27.891-3.235,60.428-4.851,92.023-11.165c49.1-9.812,95.603-27.392,133.341-62.034
@@ -32,7 +41,7 @@ export default class Logo extends Component {
           c-15.235,19.484-32.297,37.54-48.573,56.21c-2.269,2.598-4.704,5.053-7.063,7.579c9.989,0.917,31.992-2.129,41.926-4.636
           c-9.843,25.463-25.087,45.134-49.58,58.834c36.606-1.173,63.611-16.304,104.508-65.407c7.734,11.939,3.445,37.765-3.854,56.244
           c15.64-3.453,46.991-41.165,61.685-72.807C257.104,477.77,258.025,445.98,252.271,414.939z"/>
-        <path className='second' ref={r=>this._path2=r} fillRule="evenodd" clipRule="evenodd" fill="#6D6D6D" d="M252.347,164.694c-1.339,13.165-4.964,25.165-11.589,35.165
+        <path className='second' fillRule="evenodd" clipRule="evenodd" fill="#6D6D6D" d="M252.347,164.694c-1.339,13.165-4.964,25.165-11.589,35.165
           c15-4,28.189-10.518,35.968-14.985c19.543-11.408,48.545-35.027,64.742-66.729c5.505-11.5,6.675-16.348,9.246-31.167
           c1.686-9.718,2.419-18.869,0.321-29.442c-18.741,23.219-34.467,45.981-59.413,60.147C310.433,79.058,332.689,40.83,295.995,0
           c-19.936,75.721-56.838,138.229-129.337,174.533C181.757,174.234,237.507,168.234,252.347,164.694z"/>

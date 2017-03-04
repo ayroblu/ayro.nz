@@ -22,7 +22,6 @@
   animation: none;
 }
 .Logo.NoAnimation stop{
-  animation: none;
 }
 
 @keyframes greyShimmer {
@@ -45,21 +44,15 @@
     fill-opacity: 1;
   }
 }
-@keyframes shimmerSecond {
-  to {
-    stop-color:black;
-  }
-}
 .Logo .stop1{
   stop-color:#FF870E;
 }
 .Logo .stop2{
   stop-color:#C80007;
-  animation-delay: 3s;
-  animation-direction: alternate;
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-  animation-name: shimmerSecond;
-  animation-timing-function: ease-in-out;
+  animation: shimmerSecond 0.5s 3s alternate forwards infinite ease-in-out;
+}
+@keyframes shimmerSecond {
+  to {
+    stop-color:#f11;
+  }
 }
