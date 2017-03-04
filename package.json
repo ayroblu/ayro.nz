@@ -2,20 +2,39 @@
   "name": "ayro.nz",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "start": "nodemon server.js",
-    "debug": "DEBUG=ayro.nz:* npm start"
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "react-scripts": "0.8.5",
+    "redux-devtools": "^3.3.2",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.2.0"
   },
   "dependencies": {
-    "body-parser": "~1.15.2",
+    "body-parser": "^1.16.1",
     "compression": "^1.6.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
-    "express": "~4.14.0",
-    "morgan": "~1.7.0",
-    "nodemon": "^1.11.0",
-    "pug": "~2.0.0-beta6",
-    "serve-favicon": "~2.3.0",
-    "stylus": "0.54.5"
+    "express": "^4.14.0",
+    "ignore-styles": "^5.0.1",
+    "import-export": "^1.0.1",
+    "lodash": "^4.17.4",
+    "material-ui": "^0.16.7",
+    "moment": "^2.17.1",
+    "morgan": "^1.7.0",
+    "node-fetch": "^1.6.3",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.2",
+    "react-router": "^3.0.2",
+    "react-router-redux": "^4.0.8",
+    "react-sidebar": "^2.2.1",
+    "react-tap-event-plugin": "^2.0.1",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.8.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:server": "NODE_ENV=development nodemon server",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
