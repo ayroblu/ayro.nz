@@ -5,17 +5,15 @@ import { bindActionCreators } from 'redux'
 import * as userActions from '../actions/user'
 import './MainPage.css'
 import Logo from '../components/Logo'
-import Switcher from '../components/Switcher'
 
 class MainPage extends Component {
   render() {
     return (
-      <div className='MainPage'>
+      <article className='MainPage'>
         <Logo style={{height: '200px'}} />
         <h1>Ayro</h1>
-        <p>Technical Services</p>
-        <Switcher />
-      </div>
+        <p>Freelancer, enthusiast</p>
+      </article>
     )
   }
 }

@@ -1,6 +1,8 @@
 .MainPage{
-  padding-top: 20px;
-  padding-bottom: 20px;
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 75px);
+  transform: translate(-50%, -50%);
 }
 .MainPage h1{
   font-weight: 300;
