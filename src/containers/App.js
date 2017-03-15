@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 //import { bindActionCreators } from 'redux'
 import './App.css'
 import Switcher from '../components/Switcher'
-//import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 //import injectTapEventPlugin from 'react-tap-event-plugin'
 //import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
@@ -16,20 +16,24 @@ class App extends Component {
   render(){
     //  <MuiThemeProvider>
     //  </MuiThemeProvider>
-    //  <ReactCSSTransitionGroup
-    //    component="div"
-    //    transitionName="example"
-    //    transitionEnterTimeout={0}
-    //    transitionLeaveTimeout={2000}
-    //  >
-    //    {React.cloneElement(this.props.children, {
-    //      key: location.pathname
-    //    })}
-    //  </ReactCSSTransitionGroup>
+        //{this.props.children}
     return (
       <main className='App'>
-        {this.props.children}
-        <Switcher alignSide={location.pathname!=='/'} routing={this.props.routing}/>
+        <ReactCSSTransitionGroup
+          component="div"
+          transitionName="example"
+          transitionEnterTimeout={600}
+          transitionLeaveTimeout={300}
+        >
+          {React.cloneElement(this.props.children, {
+            key: location.pathname
+          })}
+        </ReactCSSTransitionGroup>
+        <Switcher
+          alignSide={location.pathname!=='/'}
+          routing={this.props.routing}
+          route={window.location.pathname}
+        />
       </main>
     )
   }

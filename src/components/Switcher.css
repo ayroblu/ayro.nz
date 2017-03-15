@@ -10,7 +10,7 @@
   filter: grayscale(80%);
   position: relative;
 }
-.Switcher .bubble:hover{
+.Switcher .bubble:hover, .Switcher .bubble.active{
   box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
   filter: none;
 }
@@ -19,7 +19,7 @@
   transform: scale(0.8, 0.8);
   height: 100%;
 }
-.Switcher .bubble:hover > *{
+.Switcher .bubble:hover > *, .Switcher .bubble.active > *{
   transform: scale(1, 1);
 }
 .Switcher p{
@@ -35,7 +35,7 @@
   cursor: pointer;
 
   position: fixed;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .Switcher .link.bottom{
   bottom: 30px;
