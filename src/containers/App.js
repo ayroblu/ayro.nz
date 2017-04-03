@@ -30,7 +30,7 @@ class App extends Component {
           })}
         </ReactCSSTransitionGroup>
         <Switcher
-          alignSide={location.pathname!=='/'}
+          alignSide={false}
           routing={this.props.routing}
           route={window.location.pathname}
         />
