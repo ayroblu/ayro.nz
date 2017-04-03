@@ -9,6 +9,7 @@
   overflow: hidden;
   filter: grayscale(80%);
   position: relative;
+  background-color: white;
 }
 .Switcher .bubble:hover, .Switcher .bubble.active{
   box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
@@ -36,6 +37,8 @@
 
   position: fixed;
   transition: all 0.3s ease-in-out;
+  z-index: 1;
+  backface-visibility: hidden;
 }
 .Switcher .link.bottom{
   bottom: 30px;

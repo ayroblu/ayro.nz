@@ -12,7 +12,8 @@ class MainPage extends Component {
       <article className='MainPage'>
         <Logo style={{height: '200px'}} />
         <h1>Ayro</h1>
-        <p>Freelancer, enthusiast</p>
+        <p>Websites and everything else that's tech</p>
+        <p>For enquiries please contact: <a href="mailto:blu@ayro.nz">blu@ayro.nz</a></p>
       </article>
     )
   }

@@ -29,11 +29,12 @@ class App extends Component {
             key: location.pathname
           })}
         </ReactCSSTransitionGroup>
+        {false &&
         <Switcher
           alignSide={false}
           routing={this.props.routing}
           route={window.location.pathname}
-        />
+        />}
       </main>
     )
   }

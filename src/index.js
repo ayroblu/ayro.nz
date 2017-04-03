@@ -5,7 +5,7 @@ import { syncHistoryWithStore } from 'react-router-redux'
 import { browserHistory } from 'react-router'
 
 import configureStore from './store'
-import DevTools from './containers/DevTools'
+import DevTools from './components/DevTools'
 import './index.css'
 
 import Routes from './routes'
