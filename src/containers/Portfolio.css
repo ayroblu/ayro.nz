@@ -1,0 +1,35 @@
+.Portfolio{
+  margin-top: 20px;
+}
+.Portfolio > section{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+.Portfolio .left{
+  text-align: left;
+  margin: 0 10px;
+  order: -1;
+}
+.Portfolio .right{
+  text-align: right;
+  margin: 0 10px;
+}
+.Portfolio .screenshot{
+  max-width: 300px;
+  margin: 0 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+@media(max-width: 700px) {
+  .Portfolio > section{
+    flex-wrap: wrap;
+  }
+  .Portfolio .screenshot{
+    max-width: 90%;
+  }
+  .Portfolio .left, .Portfolio .right{
+    text-align: center;
+    order: 1;
+  }
+}

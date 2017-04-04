@@ -5,6 +5,7 @@ import App from './containers/App'
 import MainPage from './containers/MainPage'
 import Technical from './containers/Technical'
 import MultiPlatform from './containers/MultiPlatform'
+import Portfolio from './containers/Portfolio'
 import NoMatch from './components/NoMatch'
 
 const Routes = props => {
@@ -12,6 +13,7 @@ const Routes = props => {
     <Router history={props.history || browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={MainPage}/>
+        <Route path="portfolio" component={Portfolio}/>
         <Route path="technical" component={Technical}/>
         <Route path="multiplatform" component={MultiPlatform}/>
         <Route path="*" component={NoMatch}/>
