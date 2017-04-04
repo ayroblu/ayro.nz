@@ -8,13 +8,15 @@ export default class Logo extends Component {
   }
   componentDidMount(){
     this._first = true
-    this.forceUpdate()
+    setTimeout(()=>{
+      this.forceUpdate()
+    }, 600)
   }
   render(){
     //<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1={"494.6821"} y1="39.7505" x2="12.2761" y2="522.1566">
     if (!this._first){
       return (
-        <svg />
+        <svg style={this.props.style}/>
       )
     }
     const name = ['Logo', this.props.animationDisabled ? 'NoAnimation' : '']

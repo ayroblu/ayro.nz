@@ -12,6 +12,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 // http://stackoverflow.com/a/34015469/988941
 //injectTapEventPlugin()
 
+var win = window || null
 class App extends Component {
   render(){
     //  <MuiThemeProvider>
@@ -26,14 +27,14 @@ class App extends Component {
           transitionLeaveTimeout={300}
         >
           {React.cloneElement(this.props.children, {
-            key: location.pathname
+            key: (win && window.location && window.location.pathname)
           })}
         </ReactCSSTransitionGroup>
         {false &&
         <Switcher
           alignSide={false}
           routing={this.props.routing}
-          route={window.location.pathname}
+          route={win && window.location.pathname}
         />}
       </main>
     )

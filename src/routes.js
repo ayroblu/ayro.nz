@@ -10,7 +10,7 @@ import NoMatch from './components/NoMatch'
 
 const Routes = props => {
   return (
-    <Router history={props.history || browserHistory}>
+    <Router history={(props && props.history) || browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={MainPage}/>
         <Route path="portfolio" component={Portfolio}/>
