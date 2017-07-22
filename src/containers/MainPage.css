@@ -7,3 +7,14 @@
 .MainPage h1{
   font-weight: 300;
 }
+.MainPage-postFade{
+  animation: fadeIn 1s 3s backwards;
+}
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}

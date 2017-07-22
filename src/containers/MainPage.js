@@ -14,9 +14,11 @@ class MainPage extends Component {
         <Link to="/portfolio">
           <Logo style={{height: '200px'}} />
         </Link>
-        <h1>Ayro</h1>
-        <p>Websites and everything else that's tech</p>
-        <p>For enquiries please contact: <a href="mailto:blu@ayro.nz">blu@ayro.nz</a></p>
+        <div className='MainPage-postFade'>
+          <h1>Ayro</h1>
+          <p>Websites and everything else that's tech</p>
+          <p>For enquiries please contact: <a href="mailto:blu@ayro.nz">blu@ayro.nz</a></p>
+        </div>
         {this.props.children}
       </article>
     )
